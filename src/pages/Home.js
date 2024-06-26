@@ -1,5 +1,6 @@
 import React, { useContext, useEffect } from "react";
 import AppContext from "../context/AppContext";
+import AntivirusList from "../components/Home/AntivirusList";
 
 const Home = () => {
   const context = useContext(AppContext);
@@ -16,9 +17,7 @@ const Home = () => {
     }
   }, [context]);
 
-  console.log(context.antiviruses);console.log(context.antiviruses);
-
-
+  console.log(context.antiviruses);
 
   // let path
   // if (
@@ -33,25 +32,11 @@ const Home = () => {
   // }
 
   return (
-    <>
+    <div>
       {context.antiviruses && context.antiviruses.length > 0 && (
-        <div>
-          {
-            context.antiviruses.map((antivirus, index) => (
-              <div key={index}>
-                {antivirus?.price}
-                <img
-                  src={`http://localhost:1111/img/${antivirus?.icon}`}
-                  alt={"path"}
-                />
-              </div>
-            ))
-
-            /*<img src={require('../assets/img/norton.png')} alt={'path'}/>*/
-          }
-        </div>
+        <AntivirusList antiviruses={context.antiviruses} />
       )}
-    </>
+    </div>
   );
 };
 
