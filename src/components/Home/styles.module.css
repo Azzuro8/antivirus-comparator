@@ -1,0 +1,68 @@
+.header {
+    /*width: 100%;*/
+    background-color: rgba(223, 216, 216, 0.1);
+
+    width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.headerContainer {
+
+    margin-bottom: 20px; /* Odstęp między elementami */
+}
+
+.imageWrapper {
+    width: 150px; /* Szerokość obrazka */
+    height: 150px; /* Wysokość obrazka */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    /*background-color: blue;*/
+    border: 1px solid white;
+    margin-bottom: 100px; /* Odstęp między obrazkiem a tekstem */
+}
+
+.logo {
+    max-width: 80%;
+    max-height: 80%;
+    object-fit: contain;
+    margin-top: auto;
+
+}
+
+.text_price {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: 0;
+width: 100%;
+    height: 20%;
+
+    background-color: green;
+}
+
+/*Ustawienia po najechaniu opcja do rozbudowania o pparametry*/
+/*.imageName {*/
+/*    display: none; !* Ukryj nazwę początkowo *!*/
+/*    position: absolute;*/
+/*    top: 110px; !* Dostosuj pozycję w razie potrzeby *!*/
+/*    left: 50%;*/
+/*    transform: translateX(-50%);*/
+/*    background-color: rgba(0, 0, 0, 0.7); !* Przyciemnione tło *!*/
+/*    color: white;*/
+/*    padding: 5px;*/
+/*    border-radius: 3px;*/
+/*    white-space: nowrap;*/
+/*}*/
+
+/*.imageWrapper:hover .imageName {*/
+/*    display: block; !* Pokaż nazwę po najechaniu *!*/
+/**}*/

@@ -3,7 +3,7 @@
     {
       "id": 1,
       "name": "Norton",
-      "icon": "norton2.png",
+      "icon": "norton2.webp",
       "price": 199,
       "seats": "1",
       "firewall": "tak",
@@ -22,7 +22,7 @@
     {
       "id": 2,
       "name": "TotalAV",
-      "icon": "totalAV.jpeg",
+      "icon": "totalAV.png",
       "price": 149,
       "seats": "1-3",
       "firewall": "tak",
@@ -79,7 +79,7 @@
     {
       "id": 5,
       "name": "Eset",
-      "icon": "eset2.jpg",
+      "icon": "eset.png",
       "price": 149,
       "seats": "1-3",
       "firewall": "tak",
@@ -98,7 +98,7 @@
     {
       "id": 6,
       "name": "Bitdefender",
-      "icon": "bitdefender2.jpg",
+      "icon": "bitdefender.png",
       "price": 149,
       "seats": "1-3",
       "firewall": "tak",
@@ -155,7 +155,7 @@
     {
       "id": 9,
       "name": "McAfee",
-      "icon": "mcafee2.jpg",
+      "icon": "mcafee2.png",
       "price": 149,
       "seats": "1-3",
       "firewall": "tak",

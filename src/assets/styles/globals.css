@@ -1,9 +1,14 @@
 html,
 body {
   margin: 0;
+  padding: 0;
+  /*background: linear-gradient(90deg, #00040e, #0d0d83);*/
+  background: linear-gradient(90deg, rgba(0, 69, 211, 0.3), #bfbfbf);
+
+
 }
 * {
-  box-sizing: border-box;
+box-sizing: border-box;
 }
 
 /*zmienne ustawic czcionki, kolory, wielkosci i szerokości  , brakpointy do mobile*/

@@ -1,6 +1,6 @@
 import React, { useContext, useEffect } from "react";
 import AppContext from "../context/AppContext";
-import AntivirusList from "../components/Home/AntivirusList";
+import AntivirusList from "../components/Home/index";
 
 const Home = () => {
   const context = useContext(AppContext);
@@ -33,6 +33,7 @@ const Home = () => {
 
   return (
     <div>
+
       {context.antiviruses && context.antiviruses.length > 0 && (
         <AntivirusList antiviruses={context.antiviruses} />
       )}
