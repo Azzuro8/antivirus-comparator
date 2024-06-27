@@ -11,7 +11,7 @@ const Menu = () => {
                     <img src={logo} alt="logo" className={styles.logo} />
                 </Link>
                 <button
-                    className="navbar-toggler"
+                    className={`navbar-toggler ${styles.navbarToggler}`}
                     type="button"
                     data-bs-toggle="collapse"
                     data-bs-target="#navbarNav"
