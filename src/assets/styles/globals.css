@@ -50,6 +50,6 @@ box-sizing: border-box;
   --font_weight_semi_bold: 700;
   --font_weight_normal: 400;
 
-  --breakpoint_mobile: 767px;
-  --breakpoint_tablet: 1279px;
+  /*--breakpoint_mobile: 767px;*/
+  /*--breakpoint_tablet: 1279px;*/
 }
