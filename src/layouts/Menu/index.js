@@ -3,7 +3,7 @@ import styles from "./styles.module.css";
 import logo from "../../assets/img/logoPA.jpg";
 import { Link } from "react-router-dom";
 
-const Header = () => {
+const Menu = () => {
   return (
     <header className={styles.header}>
       <div className={styles.headerContainer}>
@@ -19,4 +19,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default Menu;
