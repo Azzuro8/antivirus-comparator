@@ -1,4 +1,4 @@
-/*//uzywany container*/
+
 /*.header {*/
 /*    !*width: 100%;*!*/
 /*    background-color: rgba(223, 216, 216, 0.1);*/
@@ -42,7 +42,15 @@
 .imageWrapperExtended {
     composes: imageWrapper;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+
 }
+
+.imageWrapperExtendedFadeIn {
+    composes: imageWrapperExtended;
+    animation: fadeIn 2s ease-out;
+
+}
+
 
 .imageWrapperExtended:hover {
     cursor:pointer;
@@ -85,5 +93,37 @@
 }
 
 
+/* Definicja klatek kluczowych dla animacji fadeIn */
+@keyframes fadeIn {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+
+@keyframes fadeOut {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+}
+
+
+.imageWrapperFadeOut {
+    animation: fadeOut 2s ease-out;
+}
+
+
 /*responsywnosc przez siatke bootstrap*/
+
+
 
