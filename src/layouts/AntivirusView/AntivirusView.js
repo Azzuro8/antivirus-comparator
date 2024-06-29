@@ -1,8 +1,8 @@
 import React, { useEffect, useContext } from "react";
 import AppContext from "../../context/AppContext";
-import ButtonAdd from '../ButtonAdd/ButtonAdd';
-import AntivirusChosen from '../AntivirusChosen/AntivirusChosen';
-import AntivirusList from '../AntivirusList/AntivirusList';
+import ButtonAdd from '../../components/ButtonAdd/ButtonAdd';
+import AntivirusChosen from '../../components/AntivirusChosen/AntivirusChosen';
+import AntivirusList from '../../components/AntivirusList/AntivirusList';
 
 const AntivirusView = ({ antiviruses }) => {
     const { chosen, setChosen } = useContext(AppContext);

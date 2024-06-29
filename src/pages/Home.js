@@ -1,6 +1,6 @@
 import React, { useContext, useEffect } from "react";
 import AppContext from "../context/AppContext";
-import AntivirusView from "../components/AntivirusView/AntivirusView";
+import AntivirusView from "../layouts/AntivirusView/AntivirusView";
 
 const Home = () => {
   const context = useContext(AppContext);
@@ -33,7 +33,6 @@ const Home = () => {
 
   return (
     <div>
-
       {context.antiviruses && context.antiviruses.length > 0 && (
         <AntivirusView antiviruses={context.antiviruses} />
       )}
