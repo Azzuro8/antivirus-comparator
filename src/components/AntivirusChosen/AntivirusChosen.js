@@ -8,6 +8,7 @@ const AntivirusChosen = ({ content, index, chosen, setChosen }) => {
         updatedChosen[index] = null;
         console.log('Updated chosen state after REMOVING', updatedChosen);
         setChosen(updatedChosen);
+
     };
 
     return (

@@ -1,11 +1,11 @@
-import React, { useEffect, useContext } from "react";
+import React, {useEffect, useContext} from "react";
 import AppContext from "../../context/AppContext";
-import ButtonAdd from '../../components/ButtonAdd/ButtonAdd';
+import ButtonCompare from '../../components/ButtonCompare/ButtonCompare';
 import AntivirusChosen from '../../components/AntivirusChosen/AntivirusChosen';
 import AntivirusList from '../../components/AntivirusList/AntivirusList';
 
-const AntivirusView = ({ antiviruses }) => {
-    const { chosen, setChosen } = useContext(AppContext);
+const AntivirusView = ({antiviruses}) => {
+    const {chosen, setChosen} = useContext(AppContext);
 
     useEffect(() => {
         console.log("Initial chosen state:", chosen);
@@ -29,7 +29,9 @@ const AntivirusView = ({ antiviruses }) => {
                     />
                 ))}
             </div>
-            <ButtonAdd />
+            <ButtonCompare
+                chosen={chosen}
+            />
             <div className="row">
                 {antiviruses.map((antivirus, index) => (
                     <AntivirusList

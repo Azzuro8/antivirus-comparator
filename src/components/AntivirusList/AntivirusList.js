@@ -17,6 +17,7 @@ const AntivirusList = ({ antivirus, chosen, setChosen }) => {
             updatedChosen[emptyIndex] = antivirus;
             console.log("New chosen array before setting state:", updatedChosen);
             setChosen(updatedChosen);
+
         }
     };
 
