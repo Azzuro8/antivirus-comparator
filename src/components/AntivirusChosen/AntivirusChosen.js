@@ -1,7 +1,8 @@
 import React from "react";
-import styles from "./styles.module.css";
+import styles from "../AntivirusList/styles.module.css";
 
 const AntivirusChosen = ({ content, index, chosen, setChosen }) => {
+
     const handleRemoveClick = () => {
         console.log("Index Removed clicked:", index);
         const updatedChosen = [...chosen];
@@ -20,12 +21,13 @@ const AntivirusChosen = ({ content, index, chosen, setChosen }) => {
                 {content && (
                     <>
                         <img
-                            src={`http://localhost:1111/img/${content?.icon}`}
+                            src={`/img/${content?.icon}`}
                             alt={content?.name}
                             title={content?.name}
-                            className={`${styles.logo}`}
+                            className={`${styles.logo} ${(index === 0 || index === 4)  ? styles.logoSmaller : undefined}`}
                         />
-                        <h3 className={`${styles.text_price}`}>{content?.price} zł</h3>
+                        <h3 className={styles.text_price}>{content?.price} zł</h3>
+
                     </>
                 )}
             </div>

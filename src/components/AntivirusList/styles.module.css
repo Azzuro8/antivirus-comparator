@@ -62,9 +62,13 @@
 .logo {
     max-width: 80%;
     max-height: 80%;
-    object-fit: contain;
     margin-top: auto;
 
+}
+
+.logoSmaller {
+    max-width: 50%; /* Zmniejsz szerokość obrazka o dodatkowe 30% */
+    max-height: 50%; /* Zmniejsz wysokość obrazka o dodatkowe 30% */
 }
 
 .text_price {

@@ -3,7 +3,7 @@
     {
       "id": 1,
       "name": "Norton",
-      "icon": "norton2.webp",
+      "icon": "norton.png",
       "price": 199,
       "seats": "1",
       "firewall": "tak",
@@ -78,7 +78,7 @@
     },
     {
       "id": 5,
-      "name": "Eset",
+      "name": "Eset NOD32",
       "icon": "eset.png",
       "price": 149,
       "seats": "1-3",

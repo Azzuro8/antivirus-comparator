@@ -4,6 +4,7 @@ import AntivirusView from "../layouts/AntivirusView/AntivirusView";
 
 const Home = () => {
   const context = useContext(AppContext);
+
   useEffect(() => {
     if (context.antiviruses && context.antiviruses.length === 0) {
       fetch(`http://localhost:1112/antiviruses`)

@@ -1,9 +1,14 @@
 import React from "react";
 import styles from "./styles.module.css";
 
-const AntivirusList = ({ antivirus, chosen, setChosen }) => {
+
+
+const AntivirusList = ({ antivirus, chosen, setChosen, index, }) => {
+
     const handleImageClick = () => {
-        console.log("Clicked antivirus:", antivirus);
+        console.log(
+            "Clicked antivirus:", antivirus,
+        );
 
         const isAlreadyChosen = chosen.some(content => content && content.name === antivirus.name);
         console.log("Antivirus already chosen:", antivirus);
@@ -29,12 +34,13 @@ const AntivirusList = ({ antivirus, chosen, setChosen }) => {
                 onClick={handleImageClick}
             >
                 <img
-                    src={`http://localhost:1111/img/${antivirus?.icon}`}
+                    // src={`http://localhost:1111/img/${antivirus?.icon}`}
+                    src={`/img/${antivirus?.icon}`}
                     alt={antivirus?.name}
                     title={antivirus?.name}
-                    className={`${styles.logo}`}
+                    className={`${styles.logo} ${(index === 0 || index === 4) ? styles.logoSmaller : undefined}`}
                 />
-                <h3 className={`${styles.text_price}`}>{antivirus?.price} zł</h3>
+                <h3 className={styles.text_price}>{antivirus?.price} zł</h3>
             </div>
         </div>
     );

@@ -7,6 +7,7 @@ import AntivirusList from '../../components/AntivirusList/AntivirusList';
 const AntivirusView = ({antiviruses}) => {
     const {chosen, setChosen} = useContext(AppContext);
 
+
     useEffect(() => {
         console.log("Initial chosen state:", chosen);
         // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -36,6 +37,7 @@ const AntivirusView = ({antiviruses}) => {
                 {antiviruses.map((antivirus, index) => (
                     <AntivirusList
                         key={index}
+                        index={index}
                         antivirus={antivirus}
                         chosen={chosen}
                         setChosen={setChosen}
