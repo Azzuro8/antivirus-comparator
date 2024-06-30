@@ -1,24 +1,33 @@
-import React, { useContext, useEffect } from "react";
+import React, {useContext, useEffect} from "react";
 import AppContext from "../context/AppContext";
+import CompareTable from "../components/CompareTable/CompareTable";
+
 
 const Compare = () => {
-  const context = useContext(AppContext);
-  useEffect(() => {
-    if (context.antiviruses && context.antiviruses.length === 0) {
-      fetch(`http://localhost:3000/antiviruses`)
-        .then((response) => response.json())
-        .then((data) => {
-          context.setAntiviruses(data);
-        })
-        .catch((error) => {
-          console.log(error);
-        });
-    }
-  }, [context]);
+    const context = useContext(AppContext);
 
-  console.log(context.antiviruses);
+    useEffect(() => {
+        if (context.antiviruses && context.antiviruses.length === 0) {
+            fetch(`http://localhost:3000/antiviruses`)
+                .then((response) => response.json())
+                .then((data) => {
+                    context.setAntiviruses(data);
+                })
+                .catch((error) => {
+                    console.log(error);
+                });
+        }
+    }, [context]);
 
-  return <div></div>;
+    console.log(context.antiviruses);
+
+    return (
+        <div className={'container'}>
+            <CompareTable
+            chosen={context.chosen}
+            />
+        </div>
+)
 };
 
 export default Compare;

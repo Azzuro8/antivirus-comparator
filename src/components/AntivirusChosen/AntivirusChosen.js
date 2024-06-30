@@ -13,25 +13,31 @@ const AntivirusChosen = ({ content, index, chosen, setChosen }) => {
     };
 
     return (
-        <div className={`col-lg-4 col-md-12 d-flex justify-content-center ${styles.headerContainer}`}>
-            <div
-                className={`${content ? styles.imageWrapperExtendedFadeIn : styles.imageWrapper} bg-light border border-secondary rounded-3 shadow-sm`}
-                onClick={handleRemoveClick}
-            >
-                {content && (
-                    <>
-                        <img
-                            src={`/img/${content?.icon}`}
-                            alt={content?.name}
-                            title={content?.name}
-                            className={`${styles.logo} ${(index === 0 || index === 4)  ? styles.logoSmaller : undefined}`}
-                        />
-                        <h3 className={styles.text_price}>{content?.price} zł</h3>
+        <>
+            <div className={`col-lg-4 col-md-12 d-flex justify-content-center ${styles.headerContainer}`}>
+                <div
+                    className={`${content ? styles.imageWrapperExtendedFadeIn : styles.imageWrapper} bg-light border border-secondary rounded-3 shadow-sm`}
+                    onClick={handleRemoveClick}
+                >
+                    {content && (
+                        <>
+                            <img
+                                src={`/img/${content?.icon}`}
+                                alt={content?.name}
+                                title={content?.name}
+                                className={`${styles.logo} ${(index === 0 || index === 4) ? styles.logoSmaller : undefined}`}
+                            />
+                            <h3 className={styles.text_price}>{content?.price} zł</h3>
 
-                    </>
-                )}
+                        </>
+                    )}
+                </div>
             </div>
-        </div>
+
+
+        </>
+
+
     );
 };
 
