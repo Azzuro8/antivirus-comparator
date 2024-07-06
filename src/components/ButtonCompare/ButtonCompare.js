@@ -17,11 +17,11 @@ const ButtonCompare = ({ chosen }) => {
                     type="button"
                     disabled
                 >
-                    {icon} PORÓWNAJ
+                    {icon} COMPARE
                 </button>
             ) : (
                 <Link to="/compare" className={buttonClass}>
-                    {icon} PORÓWNAJ
+                    {icon} COMPARE
                 </Link>
             )}
         </div>

@@ -40,7 +40,7 @@ const AntivirusList = ({ antivirus, chosen, setChosen, index, }) => {
                     title={antivirus?.name}
                     className={`${styles.logo} ${(index === 0 || index === 4) ? styles.logoSmaller : undefined}`}
                 />
-                <h3 className={styles.text_price}>{antivirus?.price} zł</h3>
+                <h3 className={styles.text_price}>{antivirus?.price}</h3>
             </div>
         </div>
     );
