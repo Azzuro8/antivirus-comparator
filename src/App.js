@@ -1,17 +1,31 @@
-import React, {useState} from "react";
+import React, { useState, useEffect } from "react";
 import Layout from "./pages/Layout";
 import Home from "./pages/Home";
 import Compare from "./pages/Compare";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
-import {BrowserRouter, Route, Routes} from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./assets/styles/globals.css";
 import AppContext from "./context/AppContext";
 
-
 function App() {
     const [antiviruses, setAntiviruses] = useState([]);
-    const [chosen, setChosen] = useState([null, null, null])
+    const [chosen, setChosen] = useState([null, null, null]);
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        const storedChosen = localStorage.getItem('chosenAntiviruses');
+        if (storedChosen) {
+            setChosen(JSON.parse(storedChosen));
+        }
+        setLoading(false);
+    }, []);
+
+    useEffect(() => {
+        if (!loading) {
+            localStorage.setItem('chosenAntiviruses', JSON.stringify(chosen));
+        }
+    }, [chosen, loading]);
 
     return (
         <AppContext.Provider
@@ -22,16 +36,20 @@ function App() {
                 setChosen: setChosen,
             }}
         >
-            <BrowserRouter>
-                <Routes>
-                    <Route path="/" element={<Layout/>}>
-                        <Route index element={<Home/>}/>
-                        <Route path="compare" element={<Compare/>}/>
-                        <Route path="contact" element={<Contact/>}/>
-                        <Route path="*" element={<NotFound/>}/>
-                    </Route>
-                </Routes>
-            </BrowserRouter>
+            {loading ? (
+                <div>Loading...</div>
+            ) : (
+                <BrowserRouter>
+                    <Routes>
+                        <Route path="/" element={<Layout />}>
+                            <Route index element={<Home />} />
+                            <Route path="compare" element={<Compare />} />
+                            <Route path="contact" element={<Contact />} />
+                            <Route path="*" element={<NotFound />} />
+                        </Route>
+                    </Routes>
+                </BrowserRouter>
+            )}
         </AppContext.Provider>
     );
 }

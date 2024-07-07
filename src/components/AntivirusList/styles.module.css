@@ -1,11 +1,11 @@
 
-/*.header {*/
-/*    !*width: 100%;*!*/
-/*    background-color: rgba(223, 216, 216, 0.1);*/
-/*    width: 1280px;*/
-/*    margin: 0 auto;*/
+.header {
+    width: 100%;
+    background-color: rgba(223, 216, 216, 0.1);
+    /*width: 1280px;*/
+    margin: 0 auto;
 
-/*}*/
+}
 
 
 .headerContainer {
@@ -26,7 +26,7 @@
     align-items: center;
     flex-direction: column;
     border: 5px solid white;
-    background-color: #f1eded;
+    background: white;
     border-radius: 10px;
     padding: 10px;
 
@@ -90,7 +90,7 @@
 
 /* Zastosowanie efektów gradientowych i cieni */
 .bg-light {
-    background: linear-gradient(135deg, #f5f7fa, #e2e8f0);
+    /*background: linear-gradient(135deg, #f5f7fa, #e2e8f0);*/
 }
 
 .border-secondary {

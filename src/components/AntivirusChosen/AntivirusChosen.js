@@ -16,7 +16,7 @@ const AntivirusChosen = ({ content, index, chosen, setChosen }) => {
         <>
             <div className={`col-lg-4 col-md-12 d-flex justify-content-center ${styles.headerContainer}`}>
                 <div
-                    className={`${content ? styles.imageWrapperExtendedFadeIn : styles.imageWrapper} bg-light border border-secondary rounded-3 shadow-sm`}
+                    className={`${content ? styles.imageWrapperExtendedFadeIn : styles.imageWrapper}  border border-secondary rounded-3 shadow-sm`}
                     onClick={handleRemoveClick}
                 >
                     {content && (

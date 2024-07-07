@@ -1,0 +1,42 @@
+/* Ogólne style */
+
+
+/* Stylizacja przycisku */
+
+/* Stylizacja stopki */
+.footer {
+    width: 100%;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #1f1f1f, #4b4b4b);
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+    color: white;
+    text-align: center;
+}
+
+.footer h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.footer h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+
+
+/* Responsywność */
+/*@media (max-width: 768px) {*/
+/*    .footer h1 {*/
+/*        font-size: 1.5rem;*/
+/*    }*/
+
+/*    .footer h2 {*/
+/*        font-size: 1.2rem;*/
+/*    }*/
+
+/*    .glowOnHover {*/
+/*        font-size: 0.9rem;*/
+/*        padding: 8px 16px;*/
+/*    }*/
+/*}*/
