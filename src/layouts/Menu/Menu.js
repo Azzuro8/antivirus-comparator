@@ -2,6 +2,7 @@ import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import styles from './styles.module.css';
 import logo from '../../assets/img/logo_white.jpg';
+import HeaderTitle from '../../components/HeaderTitle/HeaderTitle';
 
 const Menu = () => {
     return (
@@ -22,7 +23,7 @@ const Menu = () => {
                     <span className="navbar-toggler-icon"></span>
                 </button>
                 <div className="collapse navbar-collapse" id="navbarNav">
-                    <ul className={`navbar-nav ms-auto`}>
+                    <ul className={`navbar-nav ms-auto ${styles.navbarNav}`}>
                         <li className="nav-item">
                             <NavLink exact className={`nav-link ${styles.navLink}`} to="/">Home</NavLink>
                         </li>
@@ -31,6 +32,7 @@ const Menu = () => {
                         </li>
                     </ul>
                 </div>
+                <HeaderTitle />
             </div>
         </header>
     );

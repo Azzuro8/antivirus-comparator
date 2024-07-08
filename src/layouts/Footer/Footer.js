@@ -7,7 +7,7 @@ const Footer = () => {
         <footer className={styles.footer}>
             <div className="container">
                 <h1>Want to learn more? Do you have any questions?</h1>
-                <h2>Click below</h2>
+                <h2>Click below </h2>
                 <ButtonContact />
             </div>
         </footer>

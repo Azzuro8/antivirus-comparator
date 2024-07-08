@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfect Antivirus</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .header-container {
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: #333;
+            margin: 0;
+            animation: fadeIn 2s ease-in-out, colorChange 4s infinite alternate;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes colorChange {
+            0% {
+                color: #ff6347; /* Tomato */
+            }
+            100% {
+                color: #4682b4; /* Steel Blue */
+            }
+        }
+
+        .subheading {
+            font-size: 1.5rem;
+            color: #666;
+            margin-top: 10px;
+            animation: fadeIn 2s ease-in-out 1s;
+        }
+
+        .underline {
+            width: 50px;
+            height: 4px;
+            background-color: #ff6347;
+            margin: 20px auto;
+            animation: slideIn 1s ease-in-out;
+        }
+
+        @keyframes slideIn {
+            0% {
+                width: 0;
+                background-color: #4682b4;
+            }
+            100% {
+                width: 50px;
+                background-color: #ff6347;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="header-container">
+    <h1>Perfect Antivirus</h1>
+    <div class="underline"></div>
+    <div class="subheading">Your Ultimate Security Solution</div>
+</div>
+</body>
+</html>

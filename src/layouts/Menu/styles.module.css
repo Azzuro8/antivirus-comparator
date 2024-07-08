@@ -10,6 +10,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 0 20px;
+  position: relative;
 }
 
 .logo {
@@ -18,11 +19,9 @@
 }
 
 .navLink {
-
-  font-size: 1.2rem!important;
+  font-size: 1.2rem !important;
   padding: 10px 15px;
   border-radius: 5px;
-
 }
 
 .navLink:hover {
@@ -33,7 +32,6 @@
   color: #b80a0a !important;
   text-underline-color: #28a745;
 }
-
 
 .navbar-toggler {
   border: none;
