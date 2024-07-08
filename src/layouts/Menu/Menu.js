@@ -3,11 +3,23 @@ import { Link, NavLink } from 'react-router-dom';
 import styles from './styles.module.css';
 import logo from '../../assets/img/logo_white.jpg';
 import AppContext from '../../context/AppContext';
+import Swal from 'sweetalert2';
 
 const Menu = () => {
-
     const { chosen } = React.useContext(AppContext);
     const isDisabled = chosen.filter(item => item !== null).length < 2;
+
+    const handleCompareClick = (event) => {
+        if (isDisabled) {
+            event.preventDefault();
+            Swal.fire({
+                icon: 'warning',
+                title: 'Wybierz co najmniej dwa antywirusy do porównania',
+                showConfirmButton: true,
+                confirmButtonText: 'OK'
+            });
+        }
+    };
 
     return (
         <header className={`${styles.header} navbar navbar-expand-lg navbar-dark`}>
@@ -37,7 +49,13 @@ const Menu = () => {
                             <NavLink exact className={`nav-link ${styles.navLink}`} to="/">Home</NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink className={`nav-link ${styles.navLink} ${isDisabled ? styles.disabledLink : ''}`} to="/compare">Compare</NavLink>
+                            <NavLink
+                                className={`nav-link ${styles.navLink} ${isDisabled ? styles.disabledLink : ''}`}
+                                to={isDisabled ? "#" : "/compare"}
+                                onClick={handleCompareClick}
+                            >
+                                Compare
+                            </NavLink>
                         </li>
                     </ul>
                 </div>
