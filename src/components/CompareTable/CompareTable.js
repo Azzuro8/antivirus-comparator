@@ -57,14 +57,15 @@ const CompareTable = ({ chosen }) => {
                 </tr>
                 {keys.filter(key => key !== 'icon' && key !== 'id').map((key) => (
                     <tr key={key} className={differences.includes(key) ? styles.differentRow : ''}>
+                        {console.log(`Rendering row for ${key}: ${differences.includes(key) ? 'differentRow' : ''}`)}
                         <th scope="row" className="">{key.charAt(0).toUpperCase() + key.slice(1)}</th>
                         {nonEmptyChosen.map((content, index) => (
                             <td key={index} className="text-center col-lg-4 col-md-6 col-sm-12">
                                 {typeof content[key] === 'boolean' ? (
                                     content[key] ? (
-                                        <i className={`fa-regular fa-circle-check ${styles.iconTrue}`}></i>
+                                        <i className={`fa-regular fa-circle-check ${styles.iconTrue} ${differences.includes(key) ? styles.underlinedIcon : ''}`}></i>
                                     ) : (
-                                        <i className={`fa-regular fa-circle-xmark ${styles.iconFalse}`}></i>
+                                        <i className={`fa-regular fa-circle-xmark ${styles.iconFalse} ${differences.includes(key) ? styles.underlinedIcon : ''}`}></i>
                                     )
                                 ) : (
                                     content[key]

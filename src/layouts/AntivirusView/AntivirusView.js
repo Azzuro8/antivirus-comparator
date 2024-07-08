@@ -24,7 +24,7 @@ const AntivirusView = ({ antiviruses }) => {
 
             <div className={styles.sectionCompare}>
                 <ButtonCompare chosen={chosen}/>
-                <h2>How It Works</h2>
+                <h2>How It Works <i className="fa-regular fa-circle-question"></i></h2>
                 <h3>
                     <span className="fw-bold">1. Choose Your Antivirus:</span> <span
                     className="fw-normal">Select <b>two</b> or <b>three</b> antivirus programs you want to compare.</span>
@@ -37,7 +37,7 @@ const AntivirusView = ({ antiviruses }) => {
                     <span className="fw-bold">3. Modify Your Selection:</span> <span className="fw-normal">You can always undo your choice or select a different antivirus.</span>
                 </h3>
                 <h4>
-                    <em>Simple, fast, and effective! <i className="fas fa-dumbbell"></i></em>
+                    <em>Simple, fast, and effective!&nbsp; <i className="fas fa-dumbbell"></i></em>
                 </h4>
 
             </div>
