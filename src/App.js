@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Layout from "./pages/Layout";
 import Home from "./pages/Home";
-import Compare from "./pages/Compare";
+import Result from "./pages/Result";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
@@ -43,7 +43,7 @@ function App() {
                     <Routes>
                         <Route path="/" element={<Layout />}>
                             <Route index element={<Home />} />
-                            <Route path="compare" element={<Compare />} />
+                            <Route path="result" element={<Result />} />
                             <Route path="contact" element={<Contact />} />
                             <Route path="*" element={<NotFound />} />
                         </Route>

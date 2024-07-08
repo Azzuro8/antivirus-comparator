@@ -7,6 +7,8 @@ import Swal from 'sweetalert2';
 
 const Menu = () => {
     const { chosen } = React.useContext(AppContext);
+
+    // Filtrujemy wybrane antywirusy, aby sprawdzić, czy są mniej niż 2 wybrane elementy
     const isDisabled = chosen.filter(item => item !== null).length < 2;
 
     const handleCompareClick = (event) => {
@@ -51,10 +53,10 @@ const Menu = () => {
                         <li className="nav-item">
                             <NavLink
                                 className={`nav-link ${styles.navLink} ${isDisabled ? styles.disabledLink : ''}`}
-                                to={isDisabled ? "#" : "/compare"}
+                                to={isDisabled ? "#" : "/result"}
                                 onClick={handleCompareClick}
                             >
-                                Compare
+                                Result
                             </NavLink>
                         </li>
                     </ul>

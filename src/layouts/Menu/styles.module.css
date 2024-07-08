@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton+SC&family=Margarine&family=Rubik+Glitch+Pop&display=swap');
 
 .header {
   width: 100%;
@@ -60,6 +60,7 @@
 }
 
 .headerTitle {
+  font-family: "Margarine", sans-serif;
   font-size: 2rem;
   color: #fff;
   animation: fadeIn 2s ease-in-out, colorChange 4s infinite alternate;

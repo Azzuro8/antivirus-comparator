@@ -9,7 +9,7 @@ const ButtonContact = () => {
     return (
         <div className="d-grid gap-2 col-4 mx-auto mb-lg-4">
 
-            <Link to="/compare" className={buttonClass}>
+            <Link to="/contact" className={buttonClass}>
                 {icon} CONTACT
             </Link>
         </div>

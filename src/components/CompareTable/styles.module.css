@@ -3,6 +3,14 @@
     max-width: 1200px;
 }
 
+.differentRow {
+    /*background-color: #ffeb3b !important; !* Jasnożółty kolor, możesz dostosować według potrzeb *!*/
+    text-decoration: underline;
+    text-decoration-color: orange;
+    text-decoration-thickness: 2px;
+    text-decoration-style: wavy; /* Możliwe wartości: solid, double, dotted, dashed, wavy */
+}
+
 .table {
     width: 100%;
     margin-bottom: 1rem;
@@ -11,15 +19,19 @@
     border-spacing: 0;
 }
 
+.thFirst {
+    background-color: transparent!important;
+    border: none!important;
+}
+
 .table thead th {
-    background-color: #343a40;
+    background-color: #105eac;
     color: white;
     font-weight: bold;
     text-transform: uppercase;
     padding: 10px;
-    border-bottom: 2px solid #dee2e6;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
+
+
 }
 
 .table tbody tr {

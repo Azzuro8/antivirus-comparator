@@ -1,19 +1,38 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './styles.module.css';
+import ButtonDifference from '../ButtonDifference/ButtonDifference';
 
 const CompareTable = ({ chosen }) => {
-    // Filtrujemy wybrane antywirusy, aby sprawdzić, co jest
-    const nonEmptyChosen = chosen.filter(item => item !== null);
+    const [differences, setDifferences] = useState([]);
 
-    // Pobieramy klucze obiektu z pierwszego wybranego antywirusa, jeśli istnieje
+    const nonEmptyChosen = chosen.filter(item => item !== null);
     const keys = nonEmptyChosen.length > 0 ? Object.keys(nonEmptyChosen[0]) : [];
+
+    const findDifferences = () => {
+        const diffs = [];
+        if (nonEmptyChosen.length > 1) {
+            keys.forEach(key => {
+                if (key !== 'icon' && key !== 'id') {
+                    const firstValue = nonEmptyChosen[0][key];
+                    const isDifferent = nonEmptyChosen.some(item => item[key] !== firstValue);
+                    if (isDifferent) {
+                        diffs.push(key);
+                    }
+                }
+            });
+        }
+        console.log('Differences:', diffs);
+        setDifferences(diffs);
+    };
 
     return (
         <div className="container">
             <table className={`table table-striped table-bordered ${styles.table}`}>
                 <thead>
                 <tr className="text-center">
-                    <th scope="row" className=""></th>
+                    <th scope="row" className={styles.thFirst}>
+                        <ButtonDifference chosen={chosen} onFindDifferences={findDifferences} />
+                    </th>
                     {nonEmptyChosen.map((_, index) => (
                         <th key={index} className="col-lg-4 col-md-6 col-sm-12">{`Antywirus nr ${index + 1}`}</th>
                     ))}
@@ -37,7 +56,7 @@ const CompareTable = ({ chosen }) => {
                     ))}
                 </tr>
                 {keys.filter(key => key !== 'icon' && key !== 'id').map((key) => (
-                    <tr key={key}>
+                    <tr key={key} className={differences.includes(key) ? styles.differentRow : ''}>
                         <th scope="row" className="">{key.charAt(0).toUpperCase() + key.slice(1)}</th>
                         {nonEmptyChosen.map((content, index) => (
                             <td key={index} className="text-center col-lg-4 col-md-6 col-sm-12">
