@@ -3,7 +3,7 @@ import AppContext from "../context/AppContext";
 import CompareTable from "../components/CompareTable/CompareTable";
 
 
-const Result = () => {
+const ResultPage = () => {
     const context = useContext(AppContext);
 
     useEffect(() => {
@@ -30,4 +30,4 @@ const Result = () => {
 )
 };
 
-export default Result;
+export default ResultPage;

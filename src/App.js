@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from "react";
-import Layout from "./pages/Layout";
-import Home from "./pages/Home";
-import Result from "./pages/Result";
-import Contact from "./pages/Contact";
-import NotFound from "./pages/NotFound";
+import LayoutPage from "./pages/LayoutPage";
+import HomePage from "./pages/HomePage";
+import ResultPage from "./pages/ResultPage";
+import ContactPage from "./pages/ContactPage";
+import NotFoundLayoutPage from "./pages/NotFoundLayoutPage";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./assets/styles/globals.css";
 import AppContext from "./context/AppContext";
+import NotFoundPage from "./pages/NotFoundPage";
 
 function App() {
     const [antiviruses, setAntiviruses] = useState([]);
@@ -41,11 +42,13 @@ function App() {
             ) : (
                 <BrowserRouter>
                     <Routes>
-                        <Route path="/" element={<Layout />}>
-                            <Route index element={<Home />} />
-                            <Route path="result" element={<Result />} />
-                            <Route path="contact" element={<Contact />} />
-                            <Route path="*" element={<NotFound />} />
+                        <Route path="/" element={<LayoutPage />}>
+                            <Route index element={<HomePage />} />
+                            <Route path="result" element={<ResultPage />} />
+                            <Route path="contact" element={<ContactPage />} />
+                        </Route>
+                        <Route path="*" element={<NotFoundLayoutPage />}>
+                            <Route path="*" element={<NotFoundPage />} />
                         </Route>
                     </Routes>
                 </BrowserRouter>

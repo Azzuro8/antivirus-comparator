@@ -2,7 +2,7 @@ import React, { useContext, useEffect } from "react";
 import AppContext from "../context/AppContext";
 import AntivirusView from "../layouts/AntivirusView/AntivirusView";
 
-const Home = () => {
+const HomePage = () => {
   const context = useContext(AppContext);
 
   useEffect(() => {
@@ -41,4 +41,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default HomePage;
