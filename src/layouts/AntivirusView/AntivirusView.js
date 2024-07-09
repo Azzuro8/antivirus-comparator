@@ -9,8 +9,8 @@ const AntivirusView = ({ antiviruses }) => {
     const { chosen, setChosen } = useContext(AppContext);
 
     return (
-        <div className={styles.sectionChosen}>
-            <div className="row bg-warning" style={{ '--bs-gutter-x': '0' }}>
+        <div className={styles.header}>
+            <div className={`bg-warning ${styles.headerChosen}`}  >
                 {chosen.map((content, index) => (
                     <AntivirusChosen
                         key={index}
@@ -22,7 +22,7 @@ const AntivirusView = ({ antiviruses }) => {
                 ))}
             </div>
 
-            <div className={styles.sectionCompare}>
+            <div className={styles.headerCompare}>
                 <ButtonCompare chosen={chosen}/>
                 <h2>How It Works <i className="fa-regular fa-circle-question"></i></h2>
                 <h3>
@@ -42,7 +42,7 @@ const AntivirusView = ({ antiviruses }) => {
 
             </div>
 
-            <div className="row" style={{'--bs-gutter-x': '0'}}>
+            <div className={styles.headerList} >
                 {antiviruses.map((antivirus, index) => (
                     <AntivirusList
                         key={index}

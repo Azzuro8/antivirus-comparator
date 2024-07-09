@@ -105,15 +105,15 @@
   }
 
   .headerCenter {
-    position: static;
+    position:static;
     transform: none;
     margin: 10px 0;
     order: 2;
   }
 
-  .navbar-toggler {
+  .navbarToggler {
     order: 3;
-    margin-top: 10px;
+
   }
 
   .navbarNav {

@@ -1,22 +1,10 @@
-
-.header {
-    width: 100%;
-    background-color: rgba(223, 216, 216, 0.1);
-    /*width: 1280px;*/
-    margin: 0 auto;
-
-}
-
-
 .headerContainer {
     display: flex;
     justify-content: center;
     align-items: center;
-    /*margin-bottom: 10px; !* Odstęp między iconami *!*/
     padding: 20px;
 
 }
-
 
 .imageWrapper {
     width: 150px; /* Szerokość obrazka */
@@ -29,11 +17,10 @@
     background: white;
     border-radius: 10px;
     padding: 10px;
-
+    margin: 10px; /* Dodajemy margines dla odstępu między ikonami */
 }
 
 .imageWrapper:hover {
-
     cursor: default;
     transform: none;
 }
@@ -42,34 +29,29 @@
 .imageWrapperExtended {
     composes: imageWrapper;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-
 }
 
 .imageWrapperExtendedFadeIn {
     composes: imageWrapperExtended;
     animation: fadeIn 2s ease-out;
-
 }
 
-
 .imageWrapperExtended:hover {
-    cursor:pointer;
+    cursor: pointer;
     transform: translateY(-5px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-
 
 .logo {
     max-width: 80%;
     max-height: 80%;
     object-fit: contain;
     margin-top: auto;
-
 }
 
 .logoSmaller {
-    max-width: 50%; /* Zmniejsz szerokość obrazka o dodatkowe 30% */
-    max-height: 50%; /* Zmniejsz wysokość obrazka o dodatkowe 30% */
+    max-width: 50%;
+    max-height: 50%;
 }
 
 .text_price {
@@ -88,17 +70,6 @@
     font-weight: bold;
 }
 
-/* Zastosowanie efektów gradientowych i cieni */
-.bg-light {
-    /*background: linear-gradient(135deg, #f5f7fa, #e2e8f0);*/
-}
-
-.border-secondary {
-    border-color: #ced4da !important;
-}
-
-
-/* Definicja klatek kluczowych dla animacji fadeIn */
 @keyframes fadeIn {
     0% {
         transform: scale(0.5);
@@ -109,7 +80,6 @@
         opacity: 1;
     }
 }
-
 
 @keyframes fadeOut {
     0% {
@@ -122,13 +92,26 @@
     }
 }
 
-
 .imageWrapperFadeOut {
     animation: fadeOut 2s ease-out;
 }
 
+/* Responsywność */
+@media (max-width: 991px) {
+   .headerContainer {
+       padding:0;
+   }
 
-/*responsywnosc przez siatke bootstrap*/
+    .imageWrapper {
+        width: 80px;
+        height: 80px;
+    }
 
 
 
+
+
+    .text_price {
+        font-size: 0.6rem;
+    }
+}

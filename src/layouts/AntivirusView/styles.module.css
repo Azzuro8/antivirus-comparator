@@ -1,4 +1,20 @@
-.sectionCompare {
+.header {
+display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.headerChosen {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+
+.headerCompare {
     background: linear-gradient(135deg, #1f1f1f, #4b4b4b);
     width: 100%;
     display: flex;
@@ -12,25 +28,59 @@
 
 }
 
-.sectionCompare h2 {
+.headerCompare h2 {
     font-size: 1.5rem;
     margin: 20px 0;
 }
 
-.sectionCompare h3 {
+.headerCompare h3 {
     font-size: 1.2rem;
     margin-bottom: 20px;
 }
 
-.sectionCompare h4 {
+.headerCompare h4 {
     font-size: 1.3rem;
     color: rgba(248, 171, 0, 0.9);
 }
 
-.sectionChosen {
-    width: 100%;
-}
 
 .customRow {
     --bs-gutter-x: 3; /* Ustaw wartość na 0 lub inną, która Ci odpowiada */
+}
+
+.headerList {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+
+
+
+/* Responsywność */
+@media (max-width: 991px) {
+    .headerChosen {
+        max-width: 100%;
+        order: 2;
+        flex-wrap: wrap;
+
+    }
+
+    .header {
+
+    }
+    .headerCompare {
+        order: 1;
+        font-size:0.5rem;
+    }
+
+    .headerList {
+        order: 3;
+        flex-wrap:wrap;
+    }
+
+    .headerCompare h2, .headerCompare h3, .headerCompare h4 {
+        font-size: 0.9rem;
+    }
+
 }

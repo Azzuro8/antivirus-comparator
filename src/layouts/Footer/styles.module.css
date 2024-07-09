@@ -25,18 +25,18 @@
 
 
 
-/* Responsywność */
-/*@media (max-width: 768px) {*/
-/*    .footer h1 {*/
-/*        font-size: 1.5rem;*/
-/*    }*/
 
-/*    .footer h2 {*/
-/*        font-size: 1.2rem;*/
-/*    }*/
+@media (max-width: 991px) {
+    .footer h1 {
+        font-size: 0.9rem;
+    }
 
-/*    .glowOnHover {*/
-/*        font-size: 0.9rem;*/
-/*        padding: 8px 16px;*/
-/*    }*/
-/*}*/
+    .footer h2 {
+        font-size: 0.7rem;
+    }
+
+    .glowOnHover {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+}

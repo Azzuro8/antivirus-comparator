@@ -28,7 +28,7 @@ const AntivirusList = ({ antivirus, chosen, setChosen, index, }) => {
 
     return (
         <div
-            className={`col-lg-4 col-md-12 d-flex justify-content-center ${styles.headerContainer} border `}>
+            className={`col-lg-4 ${styles.headerContainer} border `}>
             <div
                 className={`${styles.imageWrapperExtended} border border-secondary rounded-3 shadow-sm`}
                 onClick={handleImageClick}

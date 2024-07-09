@@ -1,8 +1,10 @@
-
 .container {
     margin: 20px auto;
     max-width: 1200px;
+}
 
+.table-responsive {
+    overflow-x: auto;
 }
 
 .differentRow {
@@ -179,4 +181,48 @@
     0% { background-position: 0 0; }
     50% { background-position: 400% 0; }
     100% { background-position: 0 0; }
+}
+
+@media (max-width: 991px) {
+    .table-responsive {
+        overflow-x: auto;
+    }
+
+    .table thead {
+        /*display: none; !* Ukryj nagłówki tabeli na małych ekranach *!*/
+    }
+
+    .table {
+display:flex;
+        justify-content: center;
+        align-content: center;
+        flex-direction: column;
+
+    }
+
+
+
+    .table tr {
+        display: flex;
+        flex-direction: row; /* Zmienia układ na wierszowy */
+        flex-wrap: nowrap;
+        margin-bottom: 15px;
+        overflow-x: auto; /* Dodaj przewijanie poziome w razie potrzeby */
+    }
+
+    .table td, .table th  {
+        flex: 1;
+        text-align: center;
+        min-width: 200px;
+    }
+
+    .table th {
+        min-width: 100px;
+        flex: 0.5;
+        text-align: left;
+    }
+
+    .table td::before {
+        display: none; /* Ukryj pseudo-elementy, jeśli nie są potrzebne */
+    }
 }
