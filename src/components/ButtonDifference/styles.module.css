@@ -4,8 +4,6 @@
     cursor: pointer;
     position: relative;
     z-index: 0;
-
-
 }
 
 .glowOnHover:before {
@@ -55,3 +53,29 @@
     100% { background-position: 0 0; }
 }
 
+@media (max-width: 991px) {
+    .glowOnHover {
+        min-width: 90px;
+        font-size:0.7rem!important;
+        padding: 4px 6px!important;
+    }
+
+
+}
+@media (max-width: 770px) {
+    .glowOnHover {
+        min-width: 20px!important;
+        padding:0!important;
+        min-height: 40px!important;
+
+    }
+    .buttonText {
+        display: none; /* Ukryj tekst przycisku */
+    }
+
+    .buttonIcon {
+        font-size: 1.2rem; /* Powiększ ikonę */
+        font-weight: bold; /* Pogrub ikonę */
+    }
+
+}

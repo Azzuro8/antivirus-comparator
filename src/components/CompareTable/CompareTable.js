@@ -30,12 +30,12 @@ const CompareTable = ({chosen}) => {
             <div className="table-responsive">
                 <table className={`table table-striped table-bordered ${styles.table}`}>
                     <thead>
-                    <tr className="text-center">
+                    <tr>
                         <th scope="row" className={styles.thFirst}>
                             <ButtonDifference chosen={chosen} onFindDifferences={findDifferences}/>
                         </th>
                         {nonEmptyChosen.map((_, index) => (
-                            <th key={index} className="col-lg-4 ">{`Antywirus nr ${index + 1}`}</th>
+                            <th key={index} className={`col-4 ${styles.description}`}>{`Antywirus nr ${index + 1}`}</th>
                         ))}
                     </tr>
                     </thead>
@@ -62,7 +62,7 @@ const CompareTable = ({chosen}) => {
                         <tr key={key} className={differences.includes(key) ? styles.differentRow : ''}>
                             <th scope="row" className="">{key.charAt(0).toUpperCase() + key.slice(1)}</th>
                             {nonEmptyChosen.map((content, index) => (
-                                <td key={index} data-label={key.charAt(0).toUpperCase() + key.slice(1)}>
+                                <td key={index}>
                                     {typeof content[key] === 'boolean' ? (
                                         content[key] ? (
                                             <i className={`fa-regular fa-circle-check ${styles.iconTrue} ${differences.includes(key) ? styles.underlinedIcon : ''}`}></i>

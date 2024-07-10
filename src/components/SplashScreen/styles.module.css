@@ -1,0 +1,72 @@
+/* SplashScreen.css */
+
+
+.splash-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: linear-gradient(90deg, #00040e, #020257); /* Opcjonalnie tło */
+    z-index: 9999; /* Upewnij się, że jest nad innymi elementami */
+}
+
+.header-container {
+    text-align: center;
+}
+
+h1 {
+    font-size: 3rem;
+    color: #fff; /* Zmieniono na biały, aby był widoczny na ciemnym tle */
+    margin: 0;
+    animation: fadeIn 2s ease-in-out, colorChange 4s infinite alternate;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes colorChange {
+    0% {
+        color: #ff6347; /* Tomato */
+    }
+    100% {
+        color: #4682b4; /* Steel Blue */
+    }
+}
+
+.subheading {
+    font-size: 1.5rem;
+    color: #8c0b0b !important; /* upewnij się, że to jest stosowane */
+    margin-top: 10px;
+    animation: fadeIn 2s ease-in-out 1s;
+}
+
+.underline {
+    width: 50px;
+    height: 4px;
+    background-color: #ff6347 !important; /* upewnij się, że to jest stosowane */
+    margin: 20px auto;
+    animation: slideIn 1s ease-in-out;
+}
+
+@keyframes slideIn {
+    0% {
+        width: 0;
+        background-color: #4682b4;
+    }
+    100% {
+        width: 50px;
+        background-color: #ff6347;
+    }
+}
