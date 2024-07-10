@@ -8,6 +8,12 @@ const CompareTable = ({chosen}) => {
     const nonEmptyChosen = chosen.filter(item => item !== null);
     const keys = nonEmptyChosen.length > 0 ? Object.keys(nonEmptyChosen[0]) : [];
 
+   //
+    const insertSpaceBeforeCapital = (str) => {
+        return str.replace(/([A-Z])/g, ' $1').trim();
+    };
+
+
     const findDifferences = () => {
         const diffs = [];
         if (nonEmptyChosen.length > 1) {
@@ -44,8 +50,7 @@ const CompareTable = ({chosen}) => {
                     <tr>
                         <th scope="row" className=""></th>
                         {nonEmptyChosen.map((content, index) => (
-                            <td key={index} data-label={`Antywirus nr ${index + 1}`}
-                                className={`${styles.headerContainer}`}>
+                            <td key={index} data-label={`Antywirus nr ${index + 1}`} className={styles.headerContainer}>
                                 <div
                                     className={`${styles.imageWrapper} bg-light border border-secondary rounded-3 shadow-sm`}>
                                     <img
@@ -60,7 +65,7 @@ const CompareTable = ({chosen}) => {
                     </tr>
                     {keys.filter(key => key !== 'icon' && key !== 'id').map((key) => (
                         <tr key={key} className={differences.includes(key) ? styles.differentRow : ''}>
-                            <th scope="row" className="">{key.charAt(0).toUpperCase() + key.slice(1)}</th>
+                            <th scope="row" className="">{insertSpaceBeforeCapital(key.charAt(0).toUpperCase() + key.slice(1))}</th>
                             {nonEmptyChosen.map((content, index) => (
                                 <td key={index}>
                                     {typeof content[key] === 'boolean' ? (

@@ -22,7 +22,7 @@ const ResultPage = () => {
     console.log(context.antiviruses);
 
     return (
-        <div className={''}>
+        <div>
             <CompareTable
             chosen={context.chosen}
             />

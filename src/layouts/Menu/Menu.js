@@ -48,7 +48,7 @@ const Menu = () => {
                 <div className={`collapse navbar-collapse ${styles.navbarNav}`} id="navbarNav">
                     <ul className={`navbar-nav ms-auto`}>
                         <li className="nav-item">
-                            <NavLink exact className={`nav-link ${styles.navLink}`} to="/">Home</NavLink>
+                            <NavLink exact={true.toString()} className={`nav-link ${styles.navLink}`} to="/">Home</NavLink>
                         </li>
                         <li className="nav-item">
                             <NavLink
