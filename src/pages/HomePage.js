@@ -7,7 +7,7 @@ const HomePage = () => {
 
   useEffect(() => {
     if (context.antiviruses && context.antiviruses.length === 0) {
-      fetch(`http://localhost:1112/antiviruses`)
+      fetch(`${process.env.REACT_APP_API_URL_ANTIVIRUSES}/antiviruses`)
         .then((response) => response.json())
         .then((data) => {
           context.setAntiviruses(data);
@@ -17,20 +17,6 @@ const HomePage = () => {
         });
     }
   }, [context]);
-
-  console.log(context.antiviruses);
-
-  // let path
-  // if (
-  //     context.antiviruses && context.antiviruses.length > 0
-  // ) {
-  //     path = '../assets/img/'+context.antiviruses[0].icon;
-  // }
-  // let imagePath = [];
-  // if (context.antiviruses && context.antiviruses.length > 0) {
-  //     const firstAntivirus = context.antiviruses[0];
-  //     imagePath = `http://localhost:1111/img/${firstAntivirus.icon}`;
-  // }
 
   return (
     <div>

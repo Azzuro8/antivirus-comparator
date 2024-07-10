@@ -8,7 +8,7 @@ const ResultPage = () => {
 
     useEffect(() => {
         if (context.antiviruses && context.antiviruses.length === 0) {
-            fetch(`http://localhost:3000/antiviruses`)
+            fetch(`${process.env.REACT_APP_API_URL_ANTIVIRUSES}/antiviruses`)
                 .then((response) => response.json())
                 .then((data) => {
                     context.setAntiviruses(data);
