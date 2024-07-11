@@ -1,4 +1,5 @@
 /* SplashScreen.css */
+@import url('https://fonts.googleapis.com/css2?family=Anton+SC&family=Margarine&family=Rubik+Glitch+Pop&display=swap');
 
 
 .splashContainer {
@@ -25,11 +26,17 @@
     text-align: center;
 }
 
-h1 {
-    font-size: 3rem;
-    color: #fff; /* Zmieniono na biały, aby był widoczny na ciemnym tle */
+.headerTitle {
     margin: 0;
+    font-family: "Margarine", sans-serif!important;
+    font-size: 2rem;
+    color: #fff;
     animation: fadeIn 2s ease-in-out, colorChange 4s infinite alternate;
+    text-transform: uppercase;
+}
+
+.largeLetter {
+    font-size: 3rem; /* Adjust the size as needed */
 }
 
 @keyframes fadeIn {
@@ -54,7 +61,7 @@ h1 {
 
 .subheading {
     font-size: 1.5rem;
-    color: #8c0b0b !important; /* upewnij się, że to jest stosowane */
+    color: rgb(248, 171, 0) !important; /* upewnij się, że to jest stosowane */
     margin-top: 10px;
     animation: fadeIn 2s ease-in-out 1s;
 }
@@ -62,7 +69,7 @@ h1 {
 .underline {
     width: 50px;
     height: 4px;
-    background-color: #ff6347 !important; /* upewnij się, że to jest stosowane */
+    background-color: rgba(248, 171, 0, 0.8) !important; /* upewnij się, że to jest stosowane */
     margin: 20px auto;
     animation: slideIn 1s ease-in-out;
 }

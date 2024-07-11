@@ -5,6 +5,8 @@ import styles from '../../layouts/SplashScreenContent/styles.module.css';
 
 const SplashScreen = ({refCurrent}) => {
 
+    const [loading, setLoading] = useState(true)
+
     useEffect(() => {
         const timer = setTimeout(() => {
             setLoading(false)
@@ -14,14 +16,16 @@ const SplashScreen = ({refCurrent}) => {
         }
     }, [])
 
-    const [loading, setLoading] = useState(true)
+
 
 
     return createPortal(
         <div
             className={loading ? styles.splashContainer : `${styles.splashContainer} ${styles.splashContainerDisabled}`}>
             <div className={styles.headerContainer}>
-                <h1>Perfect Antivirus</h1>
+                <h1 className={styles.headerTitle}>
+                    <span className={styles.largeLetter}>P</span>ERFECT <span className={styles.largeLetter}>A</span>NTIVIRUS
+                </h1>
                 <div className={styles.underline}></div>
                 <div className={styles.subheading}>Your Ultimate Security Solution</div>
             </div>

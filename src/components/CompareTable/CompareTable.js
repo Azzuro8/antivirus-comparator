@@ -32,14 +32,13 @@ const CompareTable = ({chosen}) => {
     };
 
     return (
-        <div className="container">
-            <div className="table-responsive">
+        <div className={styles.header}>
+            <div className={styles.headerContainer}>
+                <ButtonDifference chosen={chosen} onFindDifferences={findDifferences}/>
                 <table className={`table table-striped table-bordered ${styles.table}`}>
                     <thead>
                     <tr>
-                        <th scope="row" className={styles.thFirst}>
-                            <ButtonDifference chosen={chosen} onFindDifferences={findDifferences}/>
-                        </th>
+                        <th scope="row" className={`col-2 ${styles.thFirst}` } ></th>
                         {nonEmptyChosen.map((_, index) => (
                             <th key={index} className={`col-4 ${styles.description}`}>{`Antywirus nr ${index + 1}`}</th>
                         ))}
@@ -50,7 +49,7 @@ const CompareTable = ({chosen}) => {
                     <tr>
                         <th scope="row" className=""></th>
                         {nonEmptyChosen.map((content, index) => (
-                            <td key={index} data-label={`Antywirus nr ${index + 1}`} className={styles.headerContainer}>
+                            <td key={index} data-label={`Antywirus nr ${index + 1}`}>
                                 <div
                                     className={`${styles.imageWrapper} bg-light border border-secondary rounded-3 shadow-sm`}>
                                     <img
@@ -65,7 +64,7 @@ const CompareTable = ({chosen}) => {
                     </tr>
                     {keys.filter(key => key !== 'icon' && key !== 'id').map((key) => (
                         <tr key={key} className={differences.includes(key) ? styles.differentRow : ''}>
-                            <th scope="row" className="">{insertSpaceBeforeCapital(key.charAt(0).toUpperCase() + key.slice(1))}</th>
+                            <th scope="row">{insertSpaceBeforeCapital(key.charAt(0).toUpperCase() + key.slice(1))}</th>
                             {nonEmptyChosen.map((content, index) => (
                                 <td key={index}>
                                     {typeof content[key] === 'boolean' ? (

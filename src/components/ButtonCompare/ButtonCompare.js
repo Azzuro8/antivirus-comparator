@@ -8,9 +8,6 @@ const ButtonCompare = ({ chosen }) => {
     // Filtrujemy wybrane antywirusy, aby sprawdzić, czy są mniej niż 2 wybrane elementy
     const isDisabled = chosen.filter(item => item !== null).length < 2;
 
-    const buttonClass = `btn btn-warning text-light fw-semibold ${styles.glowOnHover}`;
-    const icon = <i className="fa-solid fa-scale-unbalanced-flip"></i>;
-
     const handleCompareClick = (event) => {
 
         if (isDisabled) {
@@ -23,6 +20,9 @@ const ButtonCompare = ({ chosen }) => {
             });
         }
     };
+
+    const buttonClass = `btn btn-warning text-light fw-semibold ${styles.glowOnHover}`;
+    const icon = <i className="fa-solid fa-scale-unbalanced-flip"></i>;
 
     return (
         <div className="d-grid gap-2 col-4 mx-auto "

@@ -5,6 +5,11 @@
     padding: 20px;
 
 }
+.headerContainerList {
+  composes: headerContainer;
+    border: 1px solid white;
+}
+
 
 .imageWrapper {
     width: 150px; /* Szerokość obrazka */
@@ -100,17 +105,14 @@
 @media (max-width: 991px) {
    .headerContainer {
        padding:0;
+       border:none !important;
    }
+
 
     .imageWrapper {
         width: 80px;
         height: 80px;
     }
-
-
-
-
-
     .text_price {
         font-size: 0.6rem;
     }

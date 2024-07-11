@@ -6,7 +6,7 @@ const ButtonDifference = ({ onFindDifferences }) => {
     const icon = <i className={`fa-brands fa-searchengin ${styles.buttonIcon}`}></i>;
 
     return (
-        <div className="d-flex justify-content-center">
+        <div className="d-grid gap-2 col-4 mx-auto mb-lg-4">
             <button className={buttonClass} type="button" onClick={onFindDifferences}>
                 {icon} <span className={styles.buttonText}>FIND DIFFERENCES</span>
             </button>
