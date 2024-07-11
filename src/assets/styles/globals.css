@@ -8,7 +8,7 @@ body {
   justify-content: center;
   align-items: center;
   color: #fff;
-  background: linear-gradient(90deg, #00040e, #020257);
+  background: linear-gradient(90deg, #00040e, #020257)!important;
 }
 
 * {

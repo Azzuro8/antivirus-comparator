@@ -1,7 +1,7 @@
 /* SplashScreen.css */
 
 
-.splash-container {
+.splashContainer {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -12,9 +12,16 @@
     left: 0;
     background: linear-gradient(90deg, #00040e, #020257); /* Opcjonalnie tło */
     z-index: 9999; /* Upewnij się, że jest nad innymi elementami */
+    transition-duration: 1s;
 }
 
-.header-container {
+
+.splashContainerDisabled {
+    opacity: 0;
+    z-index: -1;
+}
+
+.headerContainer {
     text-align: center;
 }
 

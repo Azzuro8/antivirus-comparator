@@ -8,6 +8,8 @@
 # testing
 /coverage
 /public/test.html
+/public/testowy J.js
+public/testowy.html
 
 # production
 /build

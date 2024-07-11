@@ -24,7 +24,9 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "PORT=1111 react-scripts start",
+    "start_db_antiviruses": "json-server --watch db.json --port 1112",
+    "start_db_contacts": "json-server --watch db2.json --port 1113",
+    "start": "concurrently \"npm run start_db_antiviruses\" \"npm run start_db_contacts\" \"PORT=1111 react-scripts start\"",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
