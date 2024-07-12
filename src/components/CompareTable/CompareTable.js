@@ -63,8 +63,8 @@ const CompareTable = ({chosen}) => {
                         ))}
                     </tr>
                     {keys.filter(key => key !== 'icon' && key !== 'id').map((key) => (
-                        <tr key={key} className={differences.includes(key) ? styles.differentRow : ''}>
-                            <th scope="row">{insertSpaceBeforeCapital(key.charAt(0).toUpperCase() + key.slice(1))}</th>
+                        <tr key={key} className={differences.includes(key) && styles.differentRow}>
+                            <th>{insertSpaceBeforeCapital(key.charAt(0).toUpperCase() + key.slice(1))}</th>
                             {nonEmptyChosen.map((content, index) => (
                                 <td key={index}>
                                     {typeof content[key] === 'boolean' ? (
